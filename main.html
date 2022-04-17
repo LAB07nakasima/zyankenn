@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/main.css">
+
+  <title>じゃんけん</title>
+</head>
+<body>
+  <main>
+    <div class="running_image">
+      <img src="/img/running.png" alt="">
+    </div>
+
+  
+    <div class="main_button">
+      <ul>   <!--li(リスト)の親-->
+        <div>
+          <li id="gu_btn">グー</li>
+        </div>
+        <div>
+          <li id="cho_btn">チョキ</li>
+        </div>
+        <div>
+          <li id="par_btn">パー</li>
+        </div>
+      </ul>
+    </div>
+     
+    <div class="ungry_tom">
+      <img src="/img/tom_battle.png" alt="">
+    </div>
+
+    <div id="com_hand">コンピュータの出した手  は？</div>
+
+    <div class="com_hand_button">
+      <div id="com_btn">相手はなにだすかな〜</div>
+      <p>ボタンを押してね</p>
+    </div>
+
+    <div class="tom_sleep_animation">
+      <img class="keyframe2_animation" src="/img/tom_sleeping.png" alt="">
+    </div>
+
+  </main>
+
+  <!-- jquery引用 -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- ここからJSコード -->
+  <script>
+    // グーの定数　最初はfalse.クリックするとtrueになるよ
+    let gu = false;
+    $('#gu_btn').on('click',function(){
+      gu = true;
+      console.log('true');
+    });
+    
+    // チョキの定数　
+    let cho = false;
+    $('#cho_btn').on('click',function(){
+      cho = true;
+      console.log('true');
+    });
+
+    let pa = false;
+    $('#pa_btn').on('click',function(){ 
+      pa = true;
+      console.log('true');
+    });
+
+    $('#com_btn').on('click',function(){
+      // const min = 0;
+      // const max = 2;
+      // const randomNumber1 = Math.floor(Math.random() * (max - min + 1))+ min;
+
+      if (gu === true ) {
+        window.location.href = 'result.html?text=gu' ;//テキストっていう変数にguを入れてあるよ
+      }else if (cho === true) {
+        window.location.href = 'result.html?text=cho' ;
+      } else if (pa === true) {
+        window.location.href = 'result.html?text=pa' ;
+      }
+
+    });
+
+    console.log(text);
+
+
+
+
+//  $('#gu_btn').on('click',function(){ //グーボタン　押したら　動作{以下
+//   const min = 0; //最小値定義付
+//   const max = 2; //最大値定義付 
+//   const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min; //定義付したランダムな数字=整数(ランダムな数字×)
+
+
+  </script>
+
+
+</body>
+</html>

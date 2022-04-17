@@ -1,0 +1,166 @@
+/* じゃんけんボタンのデザイン */
+#main_btn{
+ width: 300px;
+ height: 40px;
+ line-height: 40px;
+ margin: 10px auto;
+ background: orange;
+ color: black;
+ font-size: 25px;
+ font-weight: bold;
+ border-radius: 20px;
+ user-select: none;
+ cursor: pointer;
+}
+
+/* ぐーチョキぱーの上を走るじぇり達設定 */
+.running_image img{
+  /* margin-top: 10%; */
+  width: 20%;
+  height: 20%;
+  animation: anim 7s;
+}
+
+@keyframes anim{
+  0% {
+  transform: translateX(500px);  /* 走り出す位置 */
+  }
+
+  100% {
+    transform: translateX(-300px); /* 走り終わる位置  */
+  }
+}
+
+/* 見出しの設定 */
+.title{
+ width: 380px;
+ margin: 20px auto;
+ padding: 15px;
+ background: #efefef;
+ text-align: center;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+}
+
+/* 各ボタンのデザイン */
+#gu_btn{
+ text-align: center;
+ border: 5px solid pink;
+ width: 200px;
+ height: 70px;
+ line-height: 70px;
+ cursor: pointer;
+ font-size: 35px;
+ font-weight: bold; /* 太字 */
+ list-style-type: none;
+ border-radius: 15px;
+}
+
+#cho_btn{
+  text-align: center;
+  border: 5px solid lightblue;
+  width: 200px;
+  height: 70px;
+  line-height: 70px;
+  cursor: pointer;
+  font-size: 35px;
+  font-weight: bold;
+  list-style-type: none;
+  border-radius: 15px;
+}
+
+#par_btn{
+  text-align: center;
+  border: 5px solid lightgreen;
+  width: 200px;
+  height: 70px;
+  line-height: 70px;
+  cursor: pointer;
+  font-size: 35px;
+  font-weight: bold;
+  list-style-type: none;
+  border-radius: 15px;
+}
+
+.main_button ul{ /*main_buttonの親に働かせる */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#com_hand{
+  font-size: 50px;
+  text-align: center;
+  margin: 10%;
+}
+
+.ungry_tom{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 5%;
+}
+
+.ungry_tom img{
+  width: 25%;
+}
+
+#com_btn{
+  width: 400px;
+ height: 80px;
+ line-height: 80px;
+ margin: 50px auto;
+ background: wheat;
+ color: black;
+ font-size: 35px;
+ font-weight: bold;
+ border-radius: 20px;
+ user-select: none;
+ text-align: center;
+ cursor: pointer;
+}
+
+.com_hand_button{
+ text-align: center;
+}
+
+.com_hand_button p{
+  font-size: 20px;
+}
+
+.keyframe2_animation{
+  animation-timing-function:ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-duration: 1.5s;
+  width: 25%;
+}
+
+.keyframe2_animation{
+  animation-name: anim_h;
+}
+
+@keyframes anim_h {
+  0% {
+    transform: translate(0px, 0);
+  }
+  100% {
+    transform: translate(60px, 0);
+  }
+}
+
+.tom_sleep_animation{
+  display: flex;
+  justify-content: center;
+}
+
+
+/* result.html の加工 */
+#result{
+  font-size: 50px;
+  text-align: center;
+  margin-top: 10%;
+}
+
+

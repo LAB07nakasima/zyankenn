@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/main.css">
+  <title>じゃんけん</title>
+</head>
+
+<body>
+  <!-- 音楽流す -->
+  <audio src=""></audio>
+  <header>
+    <!-- じゃんけんボタン -->
+    <div class="title">
+      <div id="main_btn">じゃんけん！</div>
+      <p>ボタンを押してスタート</p>
+
+    </div>
+  </header>
+
+  <!-- jquery 引用 -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- <link rel="stylesheet" href="main.html"> -->
+  <!-- <a href="main.html"><img src="画像のある場所" alt="じゃんけん画面"></a> -->
+
+  <!-- じゃんけんボタン押したら画面切り替わる -->
+  <script>
+    // $("#main_btn").on('click',function(){
+    //   '<link rel="stylesheet" href="main.html">'
+    // });
+
+    $("#main_btn").on('click',function(){
+      console.log(1);
+      window.location.href = "main.html";
+    });
+
+    
+  </script>
+
+</body>
+</html>
