@@ -10,15 +10,21 @@
 
 <body>
   <main>
+    <div>
+    <h1 id="result">結果は？？</div>
 
-  <h1 id="result">結果は？？</div>
-  
+  <div class="result_animation">
+    <img src="/img/taik_smile.png" alt="">
+  </div>
 
   </main>
-  <footer>フッター</footer>
+  <footer>
+    <small>copyrights 2022 G's ACADEMY FUKUOKA All RIghts Reserved.</small>
+  </footer>
 
   <!-- jqueryの引用 -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 
   <script>
     // URLを引き出すメソッド（※URL全体）
@@ -30,42 +36,58 @@
     // 名前を指定して取り出す過程（※URLの指定した箇所）
     const data = param.get('text')
 
+
     // consoleで確認
     console.log(text); //text=URL全体
     console.log(data); //data＝URLのほしいデータ
 
+
     // com_handに対しての結果（勝ち、あいこ、負け）
-    // $('#result').on('onload',function(){
+    $('#result').ready(function(){
       const min = 0;
       const max = 2;
       const randomNumber1 = Math.floor(Math.random() * (max - min + 1))+ min
       // randomuNumber1 0:ぐー1:チョキ 2:パー　　
 
       if (data === 'gu' && randomNumber1 === 0){  
-        $("#result").text("あいこ");
+        $("#result").text("相手はグー！あいこ");
       }else if (data === 'gu' && randomNumber1 === 1){
-        $('#result').text("あなたのかち！");
+        $('#result').text("相手はチョキ！あなたのかち！");
       }else if (data === 'gu' && randomNumber1 === 2){
-        $('#result').text("あなたのまけ！");
+        $('#result').text("相手はパー！あなたのまけ！");
       }
    
       if(data === 'cho' && randomNumber1 === 0 ){
-        $('#result').text("あなたのまけ！");
+        $('#result').text("相手はグー！あなたのまけ！");
       }else if (data === 'cho' && randomNumber1 === 1 ){
-        $('#result').next("あいこ");
+        $('#result').next("相手はチョキ！あいこ");
       }else if (data === 'cho' && randomNumber1 === 2 ){
-        $('#result').next("あなたのかち！");
+        $('#result').next("相手はパー！あなたのかち！");
       }
     
       if(data === 'pa' && randomNumber1 === 0 ){
-        $('#result').text("あなたのかち！");
+        $('#result').text("相手はグー！あなたのかち！");
       }else if (data === 'pa' && randomNumber1 === 1 ){
-        $('#result').text("あなたのまけ！");
+        $('#result').text("相手はチョキ！あなたのまけ！");
       }else if (data === 'pa' && randomNumber1 === 2 ){
-        $('#result').text("あいこ");
+        $('#result').text("相手はパー！あいこ");
       }
-
+    });
     
+    const victory = "相手はチョキ！あなたのかち！" &&  "相手はパー！あなたのかち！" && "相手はグー！あなたのかち！"
+    
+      const draw = "相手はグー！あいこ" && "相手はチョキ！あいこ" &&  "相手はパー！あいこ"
+
+      const low = "相手はパー！あなたのまけ！" && "相手はグー！あなたのまけ！" && "相手はチョキ！あなたのまけ！"
+
+      $(function(){
+        $('#result').css("color","#red");
+        
+
+      })
+      if(text === victory){
+       
+      }
 
   </script>
 
